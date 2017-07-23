@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="b.js">
+        function po() {
+            document.getElementById("temmo").innerHTML = "123";
+        }
+    </script>
+    <style>
+        #info {
+            padding: 0;
+        }
+        
+        #info li {
+            display: inline;
+        }
+        
+        #info li a {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px 4px 0 0;
+        }
+        
+        #info li a:hover {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav class="navbar  navbar-fixed-top">
+            <div class="container">
+                <div id="navbar" class="collapse navbar-dark navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">肥貓</a></li>
+                        <li><a href=/admin/map>map</a></li>
+                        <li><a href="/admin/gmap">G map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <h1>圖書館資訊查詢</h1>
+            <ul>
+                <form method='get' action='search'>
+                    圖書館區名：
+                    <input type='text' name='name'>
+                    <input type='submit' value='Submit'>
+                </form>
+            </ul>
+            <ul id="info">
+                <li><a href="/search" target="_blank">result</a></li>
+            </ul>
+            <div id="output">test</div>
+
+
+</body>
+
+</html>

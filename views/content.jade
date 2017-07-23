@@ -1,0 +1,29 @@
+extends layout
+  
+block content
+    h1 sss
+       p#111 asd
+    body
+    script.
+      function asd() {
+      document.getElementById("111").textContent = tes;
+      alert("123");
+      }
+      var tes;
+      var MongoClient = require('mongodb').MongoClient;
+        MongoClient.connect('mongodb://localhost:27017/taipei', function(err, db) {
+          if (err) {
+            throw err;
+          }
+          db.collection('edu').find().toArray(function(err, result) {
+            if (err) {
+              throw err;
+            }
+            console.log(result);
+            tes = result;
+          });
+        });
+       
+    input(type='text', name='user')
+    input(type='button', onclick= 'asd()' , value='Click Me!')
+ 

@@ -1,0 +1,7 @@
+verbose = true
+port = 27017
+dbpath = /home/ubuntu/data
+noauth = true
+nojournal = true
+maxConns = 10
+rest = true

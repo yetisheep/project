@@ -1,0 +1,101 @@
+doctype html
+html(lang='en')
+  head
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='style.css')
+    meta(charset='UTF-8')
+    title search
+    style(type='text/css').
+      pre {
+      outline: 2px solid #ccc;
+      padding: 18px;
+      margin: 20px;
+      }
+      .string {
+      color: green;
+      }
+      .number {
+      color: darkorange;
+      }
+      .boolean {
+      color: blue;
+      }
+      .null {
+      color: magenta;
+      }
+      .key {
+      color: red;
+      }
+      .Object {
+      color: pink;
+      }
+      #links {
+      padding: 0;
+      }
+      #links li {
+      display: inline;
+      }
+      #links li a {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px 4px 0 0;
+      }
+      #links li a:hover {
+      background-color: orange;
+      }
+  body
+     
+    h1(style='text-align:center;') 圖書館資訊
+    ul#links
+      li
+        a(href='/') 首頁
+      li
+        a(href='/test') 返回查詢頁面
+      // li
+      //   a(href='/map') map
+      li
+        a#ur(href='https://www.google.com.tw/maps/place/' TARGET="_blank") GoogleMap
+    h2 查詢結果：
+          br 
+          br
+        - var i = 0
+        while i < count
+          
+          p #{content[i].o_tlc_agency_name}
+          p #{content[i].o_tlc_agency_address}
+          p #{content[i].o_tlc_agency_opentime}
+          br
+          
+          br
+          - i += 1 
+         
+    //     p #{123}  
+    // script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbIqd61F0MieLgoMVAOzxbMAKnXmApaCU").
+    //     var geocoder = new google.maps.Geocoder();
+    //     geocoder.geocode({ address: '台北市忠孝東路五段' },
+    //     function (result, status) {
+    //     	if (status == google.maps.GeocoderStatus.OK) {
+        
+    //     		var location = result[0].geometry.location;
+    //     		// location.Pa 緯度
+    //     		// location.Qa 經度
+    //     		console.log(location.Pa);
+        
+    //     	} else {
+    //     		alert('解析失敗!回傳狀態為：' + status);
+    //     	}
+    //     });     
+  // script(language='JavaScript').
+  //     var re = true;
+  //     function myrefresh()
+  //     {
+      
+  //     setTimeout("window.location.reload()",1000);
+  //     re = false;
+  //     }
+  //     if(re == false){
+  //     myrefresh(); //指定1秒刷新一次
+  //     }
+      

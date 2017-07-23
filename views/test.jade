@@ -1,0 +1,58 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title test
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='style.css')
+    style.
+      #info {
+      padding: 0;
+      }
+      #info li {
+      display: inline;
+      }
+      #info li a {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px 4px 0 0;
+      }
+      #info li a:hover {
+      background-color: orange;
+      }
+  body
+    .container
+      nav.navbar.navbar-fixed-top
+        .container
+          #navbar.collapse.navbar-dark.navbar-collapse
+            ul.nav.navbar-nav
+              li.active
+                a(href='/' style='font-size:250%;') 首頁
+              // li
+              //   //a(href='/admin/map' , style='font-size:250%;') map
+              li
+                a(href='https://www.google.com.tw/maps/place/' ,TARGET="_blank", style='font-size:250%;') GoogleMap
+      .main-content
+        br
+        br
+        br
+        h1 台北市圖書館資訊查詢
+        ul
+          form(method='get', action='search')
+            | 輸入區名查詢：
+            input(type='text', name='name')
+            input(type='submit', value='查詢')
+        ul#info
+        ul
+          form(method='get', action='searchname')
+            | 輸入圖書館名稱查詢：
+            input(type='text', name='name')
+            input(type='submit', value='查詢')
+        ul#info
+        
+          li
+            //a(href='/search', target='_blank') result
+        

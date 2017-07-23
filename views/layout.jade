@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title= title
+        link(rel='stylesheet', href='/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/style.css')
+    body
+        nav.navbar.navbar-fixed-top
+            .container
+                #navbar.collapse.navbar-dark.navbar-collapse
+                    ul.nav.navbar-nav
+                        li.active
+                            a(href='/') Home
+                        li
+                            a(href='/admin/map') 地圖
+                        li
+                            a(href='/admin/position') 圖書館位置
+                        li
+                            a(href='/admin/content') 內容
+        .container
+            .main-content
+                block content

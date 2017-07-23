@@ -1,0 +1,56 @@
+doctype html
+html(lang='en')
+  style(type='text/css').
+      pre {
+      outline: 2px solid #ccc;
+      padding: 18px;
+      margin: 20px;
+      }
+      .string {
+      color: green;
+      }
+      .number {
+      color: darkorange;
+      }
+      .boolean {
+      color: blue;
+      }
+      .null {
+      color: magenta;
+      }
+      .key {
+      color: red;
+      }
+      .Object {
+      color: pink;
+      }
+      #links {
+      padding: 0;
+      }
+      #links li {
+      display: inline;
+      }
+      #links li a {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px 4px 0 0;
+      }
+      #links li a:hover {
+      background-color: orange;
+      }
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title 北市圖書館資訊查詢系統
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='style.css')
+  body
+    h1(style='text-align:center;') 台北市圖書館資訊查詢系統
+    ul#links
+      li
+        a(href='/test', style='font-size:250%;') 查詢
+      li
+        a#ur(href='https://www.google.com.tw/maps/place/' ,TARGET="_blank", style='font-size:250%;') GoogleMap
+    // a#search(href='/search', style='font-size:250%;') search
